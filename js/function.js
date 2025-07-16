@@ -160,7 +160,7 @@ console.log(addTwo(4,5)); */
 
 // Immediately Invoked Function Expression (IIFE)
 
-(function dbConnect(){
+/* (function dbConnect(){
     // named IIFE
     console.log(`DB Connected.`);
 })();
@@ -168,4 +168,34 @@ console.log(addTwo(4,5)); */
 ((dbname) => {
     // unnamed IIFE
     console.log(`DB Connected again to ${dbname}`);
-})("Durgesh");
+})("Durgesh"); */
+
+/* function outer() {
+  var a = 1;
+
+  function inner() {
+    var b = 2;
+    // we can access both `a` and `b` here
+    console.log(a + b); // 3
+  }
+  inner();
+  // we can only access `a` here
+  console.log(a); // 1
+}
+outer(); */
+
+// Functions calling other functions
+function cutFruitPieces(fruit){
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges){
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    
+    const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+    return juice;
+}
+console.log(fruitProcessor(5, 8));
+
+

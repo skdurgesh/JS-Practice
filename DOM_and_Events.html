@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browsers: DOM and Events</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: 0px;
+        }
+        h1{ font-size: 40px; }
+        .wrapper{ margin: 20px auto; width: calc(100% - 30%); border: 1px dashed #ffffff; border-radius: 10px; padding: 20px; }
+        body, input{ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; background-color: #292929; color: #FFF;  }
+        .btn{ width: 100px; background-color: #fafbfc; font-size: 16px; padding: 8px 10px; border-radius: 5px; }
+        .body_text{ font-size: 16px; }
+        header{ display: flex; flex-direction: column; gap: 25px; font-size: 18px; font-weight: bold; }
+        .topHeader{ display: flex; flex-direction: row; justify-content: space-between;}
+        .guessContainer{  gap: 20px; display: flex; flex-direction: column; width: auto; align-items: center; }
+        .numberBox { position: relative; width: 100%; height: 150px; display: flex; justify-content: center; align-items: center;}
+        .border { border-top: 10px solid #FFF; display: flex; justify-content: center; align-items: center; width: 100%; position: absolute; top: calc(100% - 80px); z-index: 0;}
+        .number { width: 60px; background-color: #fafbfc; color: #292929; border-radius: 5px; padding: 12px 20px; font-weight: bolder; font-size: 40px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+        main{ display: flex; justify-content: space-evenly; margin: 50px 0px;  }
+        .left{ display: flex; flex-direction: column; gap: 15px;}
+        .right{ display: flex; flex-direction: column; gap: 15px; font-weight: bolder; }
+        .guess{ padding:20px 10px; font-size: 40px; width: 100px; text-align: center; border-radius: 5px; background: none; border: 3px solid #ffffff; color: #FFF; font-weight: bold; }
+   </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="topHeader">
+                <button class="btn again">Again!</button>
+                <p class="between">(between 1 and 20)</p>
+            </div>
+            <div class="guessContainer">
+                <h1>Guess My Number!</h1>
+                
+                <div class="numberBox">
+                    <div class="number">?</div>
+                    <div class="border"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="left">
+                <input type="number" class="guess">
+                <button class="btn check">Check!</button>
+            </section>
+
+            <section class="right">
+                <p class="message">Start Guessing...</p>
+                <p class="label-score">💯 Score <span class="score">20</span></p>
+                <p class="label-highscore">🎖️ HighScore <span class="highscore"></span></p>
+            </section>
+        </main>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- JS includes here -->
+     <script src="js/DOM_&_Events/main.js"></script>
+</body>
+</html>
